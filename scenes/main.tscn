@@ -1,0 +1,47 @@
+[gd_scene load_steps=8 format=3 uid="uid://dj12eiskmxm3t"]
+
+[ext_resource type="PackedScene" uid="uid://c5n7qq8omwsl8" path="res://scenes/player.tscn" id="1_o5qli"]
+[ext_resource type="PackedScene" uid="uid://3ibmr5hy635f" path="res://scenes/Dummy.tscn" id="2_0wfyh"]
+
+[sub_resource type="Gradient" id="Gradient_o5qli"]
+colors = PackedColorArray(0.0862745, 0, 0, 1, 0.359321, 0.0494571, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_0wfyh"]
+gradient = SubResource("Gradient_o5qli")
+fill_from = Vector2(0, 0.613971)
+fill_to = Vector2(0, 0)
+
+[sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_sugp2"]
+night_sky = SubResource("GradientTexture2D_0wfyh")
+
+[sub_resource type="Sky" id="Sky_jyhfs"]
+sky_material = SubResource("PhysicalSkyMaterial_sugp2")
+
+[sub_resource type="Environment" id="Environment_tbgi4"]
+background_mode = 2
+sky = SubResource("Sky_jyhfs")
+
+[node name="Main" type="Node"]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.322144, 0, -0.825531)
+use_collision = true
+size = Vector3(10.5359, 1, 12.2602)
+
+[node name="Player" parent="." instance=ExtResource("1_o5qli")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.430196, 2.69787, 1.46415)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_tbgi4")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.969736, 0.244157, 0, -0.244157, -0.969736, -14.5982, 0, 0)
+
+[node name="Dummy" parent="." instance=ExtResource("2_0wfyh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.153781, 1.5, 0.0400305)
+
+[node name="Dummy3" parent="." instance=ExtResource("2_0wfyh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.91064, 1.5, 0.0400305)
+
+[node name="Dummy2" parent="." instance=ExtResource("2_0wfyh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.61902, 1.5, 0.0400305)

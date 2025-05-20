@@ -1,0 +1,173 @@
+[gd_scene load_steps=15 format=4 uid="uid://c5n7qq8omwsl8"]
+
+[ext_resource type="Script" uid="uid://c44y0gxkni6ty" path="res://scripts/player.gd" id="1_3vyb7"]
+[ext_resource type="Texture2D" uid="uid://damf3y0420sr0" path="res://models/head_THEDREAMENDING.png" id="2_qhqgy"]
+[ext_resource type="Texture2D" uid="uid://b51xctnrea266" path="res://models/suit1.png" id="3_dqkch"]
+[ext_resource type="PackedScene" uid="uid://b00cnhkuu11ax" path="res://scenes/shotgun.tscn" id="4_dqkch"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_u8vuu"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dqkch"]
+size = Vector3(7.37122, 5.22864, 6.49721)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g3bi0"]
+resource_name = "material_0"
+transparency = 2
+alpha_scissor_threshold = 0.05
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("2_qhqgy")
+texture_filter = 0
+texture_repeat = false
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_5oror"]
+_surfaces = [{
+"aabb": AABB(-0.5, 0, -0.40625, 1, 0.5, 0.8125),
+"format": 34896613377,
+"index_count": 18,
+"index_data": PackedByteArray("AAABAAIAAQADAAIAAgADAAAABAADAAEAAAADAAQAAAAEAAEA"),
+"name": "material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 5,
+"vertex_data": PackedByteArray("//8AAAAAAAAAAAAA//8AAP//AAD//wAA/3////9/AAAAAAAAAAAAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_unyui"]
+resource_name = "blockbench_export_mesh"
+_surfaces = [{
+"aabb": AABB(-0.5, 0, -0.40625, 1, 0.5, 0.8125),
+"attribute_data": PackedByteArray("/z//MwAAAAD/PwAAAAD/M3QBSYqLLv9viy4wpP9DOyn/YwAA/4M7Kf9DOln/Y/8v/4M6WXR5STqKpv8fiqYwVA=="),
+"format": 34896613399,
+"index_count": 18,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABwAIAAkACgALAAwADQAOAA8A"),
+"material": SubResource("StandardMaterial3D_g3bi0"),
+"name": "material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 16,
+"vertex_data": PackedByteArray("//8AAAAA/78AAAAA////v///AAD///+/AAAAAAAA/7///wAA//9rz/9/////f2vP//8AAAAAa88AAAAA///Mm/9/////f8yb//8AAP//zJv//wAAAAD///9/////f///AAAAAAAA//8AAAAAAACzwP9/////f7PAAAAAAP//s8AAAP9/AAD/fwAA/38AAP9/r7a7Ca+2uwmvtrsJ////f////3////9//3913v9/dd7/f3XevbJFwr2yRcK9skXC")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_5oror")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_kop6e"]
+_surfaces = [{
+"aabb": AABB(-0.5, 0, -0.40625, 1, 0.5, 0.8125),
+"format": 34896613377,
+"index_count": 18,
+"index_data": PackedByteArray("AAABAAIAAQADAAIAAgADAAAABAADAAEAAAADAAQAAAAEAAEA"),
+"name": "material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 5,
+"vertex_data": PackedByteArray("//8AAAAAAAAAAAAA//8AAP//AAD//wAA/3////9/AAAAAAAAAAAAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_sbr8o"]
+resource_name = "blockbench_export_mesh2"
+_surfaces = [{
+"aabb": AABB(-0.5, 0, -0.40625, 1, 0.5, 0.8125),
+"attribute_data": PackedByteArray("/z//awAA/zf/P/83AAD/a3RhSZ6Kjv+Dio4wuP8zOon/U/9f/3M6if9zOn3/k/9T/7M6fXSVSZqKwv9/isIwtA=="),
+"format": 34896613399,
+"index_count": 18,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABwAIAAkACgALAAwADQAOAA8A"),
+"material": SubResource("StandardMaterial3D_g3bi0"),
+"name": "material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 16,
+"vertex_data": PackedByteArray("//8AAAAA/78AAAAA////v///AAD///+/AAAAAAAA/7///wAA//9rz/9/////f2vP//8AAAAAa88AAAAA///Mm/9/////f8yb//8AAP//zJv//wAAAAD///9/////f///AAAAAAAA//8AAAAAAACzwP9/////f7PAAAAAAP//s8AAAP9/AAD/fwAA/38AAP9/r7a7Ca+2uwmvtrsJ////f////3////9//3913v9/dd7/f3XevbJFwr2yRcK9skXC")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_kop6e")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qdxua"]
+resource_name = "material_1"
+transparency = 2
+alpha_scissor_threshold = 0.05
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("3_dqkch")
+texture_filter = 0
+texture_repeat = false
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_wgu8e"]
+_surfaces = [{
+"aabb": AABB(-0.5, 0, -0.40625, 1, 0.5, 0.8125),
+"format": 34896613377,
+"index_count": 18,
+"index_data": PackedByteArray("AAABAAIAAQADAAIAAgADAAAABAADAAEAAAADAAQAAAAEAAEA"),
+"name": "material_1",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 5,
+"vertex_data": PackedByteArray("//8AAAAAAAAAAAAA//8AAP//AAD//wAA/3////9/AAAAAAAAAAAAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_k054t"]
+resource_name = "blockbench_export_mesh3"
+_surfaces = [{
+"aabb": AABB(-0.5, 0, -0.40625, 1, 0.5, 0.8125),
+"attribute_data": PackedByteArray("/z//MwAAAAD/PwAAAAD/M3RRSXKKfv9Xin4wjP8rOln/S/8v/2s6Wf9DOyn/YwAA/4M7KXQBSXqLLv9fiy4wlA=="),
+"format": 34896613399,
+"index_count": 18,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABwAIAAkACgALAAwADQAOAA8A"),
+"material": SubResource("StandardMaterial3D_qdxua"),
+"name": "material_1",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 16,
+"vertex_data": PackedByteArray("//8AAAAA/78AAAAA////v///AAD///+/AAAAAAAA/7///wAA//9rz/9/////f2vP//8AAAAAa88AAAAA///Mm/9/////f8yb//8AAP//zJv//wAAAAD///9/////f///AAAAAAAA//8AAAAAAACzwP9/////f7PAAAAAAP//s8AAAP9/AAD/fwAA/38AAP9/r7a7Ca+2uwmvtrsJ////f////3////9//3913v9/dd7/f3XevbJFwr2yRcK9skXC")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_wgu8e")
+
+[node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("raycast", "hit_area") groups=["Player"]]
+script = ExtResource("1_3vyb7")
+raycast = NodePath("Head/Camera3D/OneHitCast")
+hit_area = NodePath("Head/Camera3D/HitArea")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.440144, 0)
+shape = SubResource("CapsuleShape3D_u8vuu")
+
+[node name="Head" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Head"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.266422, -0.572182)
+
+[node name="OneHitCast" type="RayCast3D" parent="Head/Camera3D"]
+enabled = false
+target_position = Vector3(0, 0, -10)
+
+[node name="HitArea" type="Area3D" parent="Head/Camera3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Head/Camera3D/HitArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.473937, 0.0762334, -3.07353)
+shape = SubResource("BoxShape3D_dqkch")
+
+[node name="bottom" type="MeshInstance3D" parent="Head"]
+transform = Transform3D(-1, -8.74228e-08, 0, 8.74228e-08, -1, 0, 0, 0, 1, 0, 0.127989, 0)
+mesh = SubResource("ArrayMesh_unyui")
+skeleton = NodePath("")
+
+[node name="top" type="MeshInstance3D" parent="Head"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.127989, 0)
+mesh = SubResource("ArrayMesh_sbr8o")
+skeleton = NodePath("")
+
+[node name="Hand" type="Node3D" parent="Head"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.328235, -0.169379, -0.788984)
+
+[node name="Shotgun" parent="Head/Hand" instance=ExtResource("4_dqkch")]
+transform = Transform3D(1, 0, 0, 0, 0.973399, 0.229115, 0, -0.229115, 0.973399, 0, 0, 0)
+
+[node name="Body" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1, -8.74228e-08, 0, 8.74228e-08, -1, 0, 0, 0, 1, 0, 0.33164, 0)
+mesh = SubResource("ArrayMesh_k054t")
+skeleton = NodePath("")

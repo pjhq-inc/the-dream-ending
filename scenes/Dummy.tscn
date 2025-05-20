@@ -1,0 +1,43 @@
+[gd_scene load_steps=5 format=3 uid="uid://3ibmr5hy635f"]
+
+[ext_resource type="Script" uid="uid://dlr3sxkrvo7bt" path="res://scripts/dummy.gd" id="1_0j1vb"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_2hh5m"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_k1tqs"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_0j1vb"]
+viewport_path = NodePath("Sprite3D/SubViewport")
+
+[node name="Dummy" type="CharacterBody3D" groups=["Living"]]
+script = ExtResource("1_0j1vb")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_2hh5m")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_k1tqs")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.39133, 0)
+flip_h = true
+texture = SubResource("ViewportTexture_0j1vb")
+
+[node name="SubViewport" type="SubViewport" parent="Sprite3D"]
+size = Vector2i(100, 20)
+
+[node name="Control" type="Control" parent="Sprite3D/SubViewport"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="Sprite3D/SubViewport/Control"]
+modulate = Color(0, 1, 0, 1)
+custom_minimum_size = Vector2(100, 20)
+layout_mode = 0
+offset_right = 4.0
+offset_bottom = 27.0
+value = 100.0
